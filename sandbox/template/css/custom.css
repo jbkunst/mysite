@@ -15,8 +15,12 @@ body {
 	transition: color 0.5s linear;
 }
 
-.nav-icon:hover {
-	color: #e0e0e0;
+.rss:hover {
+	color: #FF6600;
+}
+
+.linkedin:hover {
+	color: #FF9933;
 }
 
 .sidebar-icon {
