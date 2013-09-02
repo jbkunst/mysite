@@ -4,31 +4,50 @@ body {
 }
 
 .nav-icon {
-	color: white;
-	font-size: 2.1em;
+	color: #484848;
+	font-size: 2.0em;
 	padding-top: 0.2em;
 	padding-left: 0.3em;
-	-webkit-transition: color 0.5s linear;
-	-moz-transition: color 0.5s linear;
-	-ms-transition: color 0.5s linear;
-	-o-transition: color 0.5s linear;
-	transition: color 0.5s linear;
+	-webkit-transition: color 0.2s linear;
+	-moz-transition: color 0.2s linear;
+	-ms-transition: color 0.2s linear;
+	-o-transition: color 0.2s linear;
+	transition: color 0.2s linear;
 }
 
 .rss:hover {
-	color: #FF6600;
+	color: #EE802F;
+}
+
+.stackoverflow:hover {
+	color: #EF8236;
+}
+
+.twitter:hover {
+	color: #00ACEE;
+}
+
+.google-plus:hover {
+	color: #DD1812;
+}
+
+.last-fm:hover {
+	color: #C3000D;
+}
+
+.git-hub:hover {
+	color: #FFFFFF;
+	/*color: #171515;*/
 }
 
 .linkedin:hover {
-	color: #FF9933;
+	color: #0E76A8;
 }
 
-.sidebar-icon {
-	font-size: 1.0em;
-	padding-top: 0.2em;
-	padding-left: 0.5em;
+.random:hover {
+	color: #FFCC33;
 }
 
 .footer {
-	background-color: #e0e0e0;
+	background-color: #E0E0E0;
 }
