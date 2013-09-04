@@ -1,13 +1,14 @@
 @font-face {
 	font-family: 'jb-custom-font';
 	src:url('fonts/jb-custom-font.eot');
-	src:url('fonts/jb-custom-font.eot?#iefix') format('embedded-opentype'),
+	src:url('fonts/jb-custom-font.svg#jb-custom-font') format('svg'),
+		url('fonts/jb-custom-font.eot?#iefix') format('embedded-opentype'),
 		url('fonts/jb-custom-font.woff') format('woff'),
-		url('fonts/jb-custom-font.ttf') format('truetype'),
-		url('fonts/jb-custom-font.svg#jb-custom-font') format('svg');
+		url('fonts/jb-custom-font.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
+
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
