@@ -13,10 +13,10 @@ body {
 }
 
 .dib {
-	margin-left: 5px;
 	background-color: #111111;
-	opacity: 0.85;
+	opacity: 0.95;
 	color: #FFFFFF;
+	margin-top: 10px;
 }
 
 .img-thumbnail {
@@ -81,8 +81,4 @@ a:hover {
 
 .random:hover {
 	color: #FFCC33;
-}
-
-.footer {
-	background-color: #E0E0E0;
 }
