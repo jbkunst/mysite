@@ -23,7 +23,11 @@ body {
 	margin: 0.5em;
 }
 
-a {
+a, a:hover {
+	text-decoration: none;
+}
+
+a.asidebar:link{
 	color: #FFFFFF;
 	text-decoration: none;
 	-webkit-transition: color 0.2s linear;
@@ -33,16 +37,27 @@ a {
 	transition: color 0.2s linear;
 }
 
-a:hover {
+a.asidebar:hover{
 	color: #000000;
 }
 
 
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+}
+
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: rgb(0, 0, 0) !important;
+}
+
 .nav-icon {
 	color: #484848;
 	font-size: 2.0em;
-	padding-top: 0.2em;
-	padding-left: 0.3em;
+/*	padding-top: 0.2em;
+	padding-left: 0.3em;*/
 	-webkit-transition: color 0.2s linear;
 	-moz-transition: color 0.2s linear;
 	-ms-transition: color 0.2s linear;
