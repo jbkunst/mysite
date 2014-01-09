@@ -11,6 +11,10 @@ html {
 	background-size: cover;
 }
 
+span.tab{
+    padding: 0 10px; /* Or desired space*/
+}
+
 body {
 	padding-top: 70px;
 	padding-bottom: 20px;
@@ -45,7 +49,6 @@ a.asidebar:link{
 a.asidebar:hover{
 	color: #000000;
 }
-
 
 .nav > li > a {
     position: relative;
