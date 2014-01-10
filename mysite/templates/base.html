@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	{% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="">
+    <title></title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"> <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/highlight.js.github.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fonts.css' %}" rel="stylesheet"> <!-- Fonts -->
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet"> <!-- Custom -->
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Jkunst</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href=""><div class="nav-icon rss" aria-hidden="true" data-icon="&#xe1e5;"></div></a></li>
+                    <li><a href=""><div class="nav-icon git-hub" aria-hidden="true" data-icon="&#xe212;"></div></a></li>
+                    <li><a href=""><div class="nav-icon last-fm" aria-hidden="true" data-icon="&#xe1fb;"></div></a></li>
+                    <li><a href=""><div class="nav-icon stackoverflow" aria-hidden="true" data-icon="&#xe1dc;"></div></a></li>
+                    <li><a href=""><div class="nav-icon twitter" aria-hidden="true" data-icon="&#xe1d0;"></div></a></li>
+                    <li><a href=""><div class="nav-icon google-plus" aria-hidden="true" data-icon="&#xe20d;"></div></a></li>
+                    <li><a href=""><div class="nav-icon linkedin" aria-hidden="true" data-icon="&#xe1f3;"></div></a></li>
+                    <li><a href=""><div class="nav-icon random" aria-hidden="true" data-icon="&#xe20b;"></div></a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container">
+	{% block content %}{% endblock %}
+    </div> <!-- /container -->
+    <div class="container navbar-default dib">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav navbar-nav navbar-left iconslinks">
+                    <li><a href=""><div class="nav-icon rss" aria-hidden="true" data-icon="&#xe1e5;"></div></a></li>
+                    <li><a href=""><div class="nav-icon git-hub" aria-hidden="true" data-icon="&#xe212;"></div></a></li>
+                    <li><a href=""><div class="nav-icon last-fm" aria-hidden="true" data-icon="&#xe1fb;"></div></a></li>
+                    <li><a href=""><div class="nav-icon stackoverflow" aria-hidden="true" data-icon="&#xe1dc;"></div></a></li>
+                    <li><a href=""><div class="nav-icon twitter" aria-hidden="true" data-icon="&#xe1d0;"></div></a></li>
+                    <li><a href=""><div class="nav-icon google-plus" aria-hidden="true" data-icon="&#xe20d;"></div></a></li>
+                    <li><a href=""><div class="nav-icon linkedin" aria-hidden="true" data-icon="&#xe1f3;"></div></a></li>
+                    <li><a href=""><div class="nav-icon random" aria-hidden="true" data-icon="&#xe20b;"></div></a></li>
+                </ul>
+            </div>         
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/highlight.pack.js' %}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
