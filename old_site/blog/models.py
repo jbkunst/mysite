@@ -11,8 +11,8 @@ class Category(models.Model):
 		return self.entry_set.all().count()
 	
 	class Meta:
-		verbose_name_plural = 'Categories'
-		ordering = ('?',)
+        verbose_name_plural = 'Categories'
+        ordering = ('?',)
 
 	class Admin:
 		pass
@@ -54,8 +54,8 @@ class Entry(models.Model):
 	get_categories.allow_tags = True
  
 	class Meta:
-		verbose_name_plural = "Entries"
-		ordering = ('-pub_date',)
+        verbose_name_plural = "Entries"
+        ordering = ('-pub_date',)
 	
 	class Admin:
 		pass
