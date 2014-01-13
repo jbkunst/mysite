@@ -5,7 +5,7 @@ from django.utils import timezone
 class CategoryPostList(ListView):
 
     def get_queryset(self):
-        return Post.objects.filter(categoty__tag=self.kwargs['tag'])
+        return Post.objects.filter(categoty__tag=self.kwargs['slug'], status = 1)
 
 class PostDetailView(DetailView):
 
