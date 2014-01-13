@@ -8,7 +8,7 @@ class Category(models.Model):
 	slug = models.SlugField(unique=True) 
 
 	def counter(self):
-		return self.entry_set.all().count()
+		return self.post_set.all().count()
 	
 	class Meta:
 		verbose_name_plural = 'Categories'
