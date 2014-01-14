@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+		<div class="row dib">
+			<div class="col-md-8">
+				<div class="page-header">
+					<h3>Post on This Category</h3>
+				</div>
+{% for post in object_list %}
+	{% if forloop.first %}
+		<!-- <div class="row dib"> -->
+	{% endif %}
+	{% if forloop.counter|divisibleby:"4" %}
+		<!-- <div class="row dib"> -->
+	{% endif %}
+			<div class="col-md-6">
+				<!-- <div class="page-header"> -->
+					<h4>{{ post.title|title }}</h4>
+					<small><span aria-hidden="true" class="icon-calendar-2"></span>&nbsp;{{ post.pub_date|date:"F d Y"}}</small>
+				<!-- </div> -->
+				{{ post.body|safe|truncatewords:20 }}
+			</div>
+	{% if forloop.first %}
+		<!-- </div> -->
+	{% endif %}
+	{% if forloop.counter|divisibleby:"4" %}
+		<!-- </div> -->
+	{% endif %}
+{% endfor %}
+			</div>
+{% include "blog\sidebar.html" %}
+		</div>
+{% endblock content %}
