@@ -73,6 +73,19 @@ a.asidebar:hover{
 	transition: color 0.2s linear;
 }
 
+.nav-icon2 {
+	color: #484848;
+	font-size: 2.5em;
+/*	padding-top: 0.2em;
+	padding-left: 0.3em;*/
+	-webkit-transition: color 0.2s linear;
+	-moz-transition: color 0.2s linear;
+	-ms-transition: color 0.2s linear;
+	-o-transition: color 0.2s linear;
+	transition: color 0.2s linear;
+}
+
+
 .rss:hover {
 	color: #EE802F;
 }
