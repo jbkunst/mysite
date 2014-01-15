@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+
+{% block css %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block content %}
+				<div id="maincontent">		
+					<div class="post">
+						<h3 class="posttitle"><a href="">About (me?)</a></h3>
+						<div class="entry-content">
+
+						<img src="https://lh3.googleusercontent.com/-XQgYJ3SW2w0/AAAAAAAAAAI/AAAAAAAAAM4/vj7OaIMmWqU/s250-c-k/photo.jpg" alt="" class="alignleft imgframe2" width = 150px/>
+						<p>Hello! I'm Joshua Kunst. If I need to describe me I'll describe me like person who likes statistics, visualizations and programming and the most important thing show or teach them.</p>
+						<ul>
+							<li><a href="http://twitter.com/jbkunst/" rel="me" target="_blank">Twitter </a></li>
+							<li><a href="https://plus.google.com/118355892325924509993" rel="me" target="_blank">Google+ profile</a></li>
+						</ul>
+						<p></p>
+						</div>
+					</div>
+				</div><!-- end #maincontent -->
+				<div id="side">
+					{% include "blog/side.html" %}
+				</div><!-- end #side -->
+				<div class="clear"></div><!-- clear float -->
+{% endblock %}	

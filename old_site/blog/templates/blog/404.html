@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block css %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block content %}
+				<div id="maincontent">		
+					<div class="post">
+						<h3 class="posttitle"><a href="">Oops!!</a></h3>
+						<div class="entry-content">
+						What you're looking at doesnt exist (yet!). So, keep moving. Now, you can 
+						read one post from the random list.
+						
+						<img src="{{ STATIC_URL }}images/iconmonstr-error-4-icon.png" alt="" width=200 />
+						
+						</div>
+					</div>
+				</div><!-- end #maincontent -->
+				<div id="side">
+					{% include "blog/side.html" %}
+				</div><!-- end #side -->
+				<div class="clear"></div><!-- clear float -->
+{% endblock %}	
