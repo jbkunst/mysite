@@ -17,21 +17,19 @@
 					<h4>Topics</h4>
 				</div>
 				<ul class="nav">
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">42</span>R</a></li>
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">2</span>Django</a></li>
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">12</span>Statistics</a></li>
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">3</span>Javascript</a></li>
+					{% for category in categories %}
+					<li><a href="{% url 'category' category.slug %}" class="asidebar"><span class="badge pull-right">{{ category.counter }}</span>{{ category.name|title }}</a></li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="col-md-3">
 				<div class="page-header">
-					<h4>Posts</h4>
+					<h4>Some Posts</h4>
 				</div>
 				<ul class="nav">
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">42</span>R</a></li>
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">2</span>Django</a></li>
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">12</span>Statistics</a></li>
-				  <li><a href="#" class="asidebar"><span class="badge pull-right">3</span>Javascript</a></li>
+					{% for post in some_posts %}
+					<li><a href="{% url 'post' post.slug %}" class="asidebar">{{ post.title|title }}</a></li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>
