@@ -3,6 +3,7 @@
                             <div class="page-header">
                                 <h3>Categories</h3>
                             </div>
+                            <li><a href="{% url 'blog' %}" class="asidebar"><span class="badge pull-right">&#8734;</span>All my Posts</a></li>
                             {% for category in categories %}
                             <li><a href="{% url 'category' category.slug %}" class="asidebar"><span class="badge pull-right">{{ category.counter }}</span>{{ category.name|title }}</a></li>
                             {% endfor %}

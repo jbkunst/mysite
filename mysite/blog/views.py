@@ -2,6 +2,10 @@ from django.views.generic import ListView, DetailView, View
 from .models import Category, Post
 from django.utils import timezone
 
+class PostListAll(ListView):
+
+    model = Post
+
 class CategoryPostList(ListView):
 
     def get_queryset(self):
