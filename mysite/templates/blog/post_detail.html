@@ -8,9 +8,9 @@
 				<div class="page-header">
 					<h3>{{ post.title|title }}</h3>
 				</div>
-					<span aria-hidden="true" class="icon-calendar-2"></span>&nbsp;{{ post.pub_date|date:"F d Y"}}<span class="tab"></span>
-					<span aria-hidden="true" class="icon-drawer-3"></span>&nbsp; {% for cat in post.category.all %}<a href="{% url 'category' cat.slug %}">{{ cat.name|title }} ({{ cat.counter }})</a>&nbsp;&nbsp{% endfor %}<span class="tab"></span>
-					<span aria-hidden="true" class="icon-comments"></span>&nbsp;5 Comments
+					<i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}<span class="tab"></span>
+					<i class="fa fa-archive"></i>&nbsp; {% for cat in post.category.all %}<a href="{% url 'category' cat.slug %}">{{ cat.name|title }} ({{ cat.counter }})</a>&nbsp;&nbsp{% endfor %}<span class="tab"></span>
+					<i class="fa fa-comments"></i>&nbsp;5 Comments
 				<hr>
 {{ post.body|safe }}
 			</div>
