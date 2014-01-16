@@ -3,7 +3,7 @@
 		<div class="row dib">
 			<div class="col-md-8">
 				<div class="page-header">
-					<h3>Post on This Category</h3>
+					<h3>Post on {{ category.name|title }} Category</h3>
 				</div>
 {% for post in object_list %}
 	{% if forloop.first %}
