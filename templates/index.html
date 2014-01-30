@@ -1,24 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 		<div class="row dib">
-			<div class="col-md-6">
+			<div class="col-md-3">
 				<div class="page-header">
 					<h4>Welcome</h4>
 				</div>
+				<p>Hello! I'm Joshua Kunst, a human being, man, statistician who likes the programming and visualization and (try to) join all this insteresting topics. I like share code and ideas, so please be free to take a tour in the site or comment if you want it.</p>
+				<p>You don't know here to start? Then go to my <a href="{% url 'blog' %}">lastest post</a>.</p>
 				<!--
 				<img src="https://lh3.googleusercontent.com/-XQgYJ3SW2w0/AAAAAAAAAAI/AAAAAAAAAM4/vj7OaIMmWqU/s250-c-k/photo.jpg" class="img-thumbnail" style="float:right" width="140px">
 				-->
-				<p>Hello! I'm Joshua Kunst, a statistician who likes the programming and visualization and join all this insteresting topics. I like share code and ideas, so please be free to take a tour in the site. You don't know here to start? Then go to my <a href="{% url 'blog' %}">lastest post</a>.</p>
-				<p>I'm not so wise to give you some advices but always it's good remember certain  things.</p>
+				<!-- <p>I'm not so wise to give you some advices but always it's good remember certain  things.</p>
 				<ul>
-					<li>If you like coding (independently of what lenguaje is) is nice keep in mind <a href="http://www.python.org/dev/peps/pep-0020/" target="_blank">this</a>:</li>
-					<li><em>Other items coming soon...</em></li>
+					<li>If you like coding (independently of what lenguaje is) is good to keep in mind <a href="http://www.python.org/dev/peps/pep-0020/" target="_blank">this</a>.</li>
+					<li>At work: <em>Better is better than perferct</em>.</li>
 				</ul>
-				<iframe src="http://githubbadge.appspot.com/badge/jbkunst" style="border: 0;height: 142px;width: 200px;overflow: hidden; float:right" frameBorder=0></iframe>
+				<p>Ah! and my github profile.</p>
+				<center>
+					<iframe src="http://githubbadge.appspot.com/badge/jbkunst" style="border: 0;height: 142px;width: 200px;overflow: hidden; float:right" frameBorder=0></iframe>
+				</center> -->
 			</div>
 			<div class="col-md-3">
 				<div class="page-header">
-					<h4>Topics</h4>
+					<h4>Things that I love<!-- <span class="icon-iconmonstr-favorite-4-icon" style="color: #C3000D"></span> --></h4>
+				</div>
+				<p>Family & friends even if it causes me headaches sometimes.</p>
+				<p><a href="http://d3js.org/">R</a>. even if it causes me headaches.</p>
+				<p><a href="http://d3js.org/">D3js</a>. Even if it causes me headaches.</p>
+				<p><a href="http://d3js.org/">Dota2</a>. I'n not love the game, but I like sooo much.</p>
+			</div>
+			<div class="col-md-3">
+				<div class="page-header">
+					<h4>Topics that I like</h4>
 				</div>
 				<ul class="nav">
 					{% for category in categories %}
@@ -28,7 +41,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="page-header">
-					<h4>Some Posts</h4>
+					<h4>Some Posts that I wrote</h4>
 				</div>
 				<ul class="nav">
 					{% for post in some_posts %}
