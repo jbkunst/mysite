@@ -31,6 +31,16 @@
 			</div>
 			<div class="col-md-3">
 				<div class="page-header">
+					<h4>Some Posts that I wrote</h4>
+				</div>
+				<ul class="nav">
+					{% for post in some_posts %}
+					<li><a href="{% url 'post' post.slug %}" class="asidebar">{{ post.title|title }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>			
+			<div class="col-md-3">
+				<div class="page-header">
 					<h4>Topics that I like</h4>
 				</div>
 				<ul class="nav">
@@ -39,15 +49,6 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div class="col-md-3">
-				<div class="page-header">
-					<h4>Some Posts that I wrote</h4>
-				</div>
-				<ul class="nav">
-					{% for post in some_posts %}
-					<li><a href="{% url 'post' post.slug %}" class="asidebar">{{ post.title|title }}</a></li>
-					{% endfor %}
-				</ul>
-			</div>
+
 		</div>
 {% endblock content %}

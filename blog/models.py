@@ -4,6 +4,7 @@ from random import randrange
 import datetime
 
 class Category(models.Model):
+    
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True) 
 
@@ -14,9 +15,6 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
         ordering = ('?',)
 
-    class Admin:
-        pass
-    
     def __unicode__(self):
         return self.name
 
@@ -40,8 +38,6 @@ class Post(models.Model):
         try:
             ping_google()
         except Exception:
-            # Bare 'except' because we could get a variety
-            # of HTTP-related exceptions.
             pass
         
     def get_categories(self):
@@ -49,10 +45,7 @@ class Post(models.Model):
  
     class Meta:
         ordering = ('-pub_date',)
-    
-    class Admin:
-        pass
-        
+           
     def __unicode__(self):
         return self.title
         
