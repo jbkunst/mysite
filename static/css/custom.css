@@ -30,6 +30,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	line-height: 1.1;
 }
 
+.navbar-brand {
+	float: left;
+	padding: 14px 14px;
+	font-size: 18px;
+	line-height: 21px;
+}
+
 .dib {
 	background-color: #111111;
 	opacity: 0.95;
@@ -73,7 +80,7 @@ a.asidebar:hover{
 
 .nav-icon {
 	color: #484848;
-	font-size: 2.4em;
+	font-size: 2.5em;
 	padding-left: 0.0em;
 	padding-right: 0.0em;
 	-webkit-transition: color 0.2s linear;
@@ -113,7 +120,6 @@ a.asidebar:hover{
 
 .git-hub:hover {
 	color: #FFFFFF;
-	/*color: #171515;*/
 }
 
 .linkedin:hover {
