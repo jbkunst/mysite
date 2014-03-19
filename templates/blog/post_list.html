@@ -3,10 +3,10 @@
 {% block title %}{% if not category %}All my Posts{% else %}Posts on {{ category.name|title }} Category{% endif %}{% endblock %}
 
 {% block content %}
-		<div class="row dib">
+		<div class="row">
 			<div class="col-md-8">
 				<div class="page-header">
-					<h3>{% if not category %}All my Posts{% else %}Posts on {{ category.name|title }} Category{% endif %}</h3>
+					<h4>{% if not category %}All my Posts{% else %}Posts on {{ category.name|title }} Category{% endif %}</h4>
 				</div>
 {% for post in object_list %}
 			<div class="col-md-4">
