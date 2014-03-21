@@ -1,31 +1,21 @@
 {% extends "base.html" %}
+
+{% block title %}{% if not category %}All my Posts{% else %}Posts on {{ category.name|title }} Category{% endif %}{% endblock %}
+
 {% block content %}
-		<div class="row dib">
-			<div class="col-md-12">
-				<div class="page-header dib">
-					<h3>Post on This Category</h3>
-				</div>
-			</div>
-		</div>
-{% for post in object_list %}
-	{% if forloop.first %}
-		<div class="row dib">
-	{% endif %}
-	{% if forloop.counter|divisibleby:"4" %}
-		<div class="row dib">
-	{% endif %}
-			<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-8">
 				<div class="page-header">
-					<h4>{{ post.title|title }}</h4>
-					<small><span aria-hidden="true" class="icon-calendar-2"></span>&nbsp;{{ post.pub_date|date:"F d Y"}}</small>
+					<h4>{% if not category %}All my Posts{% else %}Posts on {{ category.name|title }} Category{% endif %}</h4>
 				</div>
-				{{ post.body|safe|truncatewords:15 }}
+				{% for post in object_list %}
+				<div class="col-md-4">
+					<h4><a href="{{ post.get_absolute_url }}">{{ post.title|title }}</a></h4>
+					<small><i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}</small>
+					{{ post.body|safe|truncatewords:20 }}
+				</div>
+			{% endfor %}
 			</div>
-	{% if forloop.first %}
+{% include "blog/sidebar.html" %}
 		</div>
-	{% endif %}
-	{% if forloop.counter|divisibleby:"4" %}
-		</div>
-	{% endif %}
-{% endfor %}
-	{% endblock content %}
+{% endblock content %}

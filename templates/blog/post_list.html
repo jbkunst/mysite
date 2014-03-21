@@ -8,15 +8,13 @@
 				<div class="page-header">
 					<h4>{% if not category %}All my Posts{% else %}Posts on {{ category.name|title }} Category{% endif %}</h4>
 				</div>
-{% for post in object_list %}
-			<div class="col-md-4">
-				<!-- <div class="page-header"> -->
+				{% for post in object_list %}
+				<div class="col-md-4">
 					<h4><a href="{{ post.get_absolute_url }}">{{ post.title|title }}</a></h4>
 					<small><i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}</small>
-				<!-- </div> -->
-				{{ post.body|safe|truncatewords:20 }}
-			</div>
-{% endfor %}
+					{{ post.body|safe|truncatewords:20 }}
+				</div>
+			{% endfor %}
 			</div>
 {% include "blog/sidebar.html" %}
 		</div>
