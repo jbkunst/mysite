@@ -34,55 +34,6 @@
 				<div class="page-header">
 					<h4>Topics in this site <em>a la D3js</em></h4>
 				</div>
-				<div id="categories-d3"></div>
-				{% load staticfiles %}
-				<script src="{% static 'js/d3.v3.min.js' %}" charset="utf-8"></script>
-				<style type="text/css">
-					.node {
-						stroke: #fff;
-						stroke-width: 1.5px;
-					}
-					.link {
-						stroke: #999;
-						stroke-opacity: .6;
-					}
-				</style>
-				<script>
-				(function() {
-					var width = 300,
-						height = 300;
-					
-					var force = d3.layout.force()
-							.charge(-100)
-							.linkDistance(50)
-							.size([width, height]);
-					
-					var svg = d3.select("#categories-d3")
-							.append("center")
-							.append("svg")
-							.attr("width", width)
-							.attr("height", height);
-
-					var nodes = [{% for category in categories %}{ "name": "{{category.name}}", "count": {{ category.counter }} },{% endfor %}]
-
-					force
-						.nodes(nodes)
-						//.links(graph.links)
-						.start();
-					
-					var node = svg.selectAll(".node")
-							.data(nodes)
-							.enter().append("circle")
-							.attr("class", "node")
-							.attr("r", function(d){ return d.count*3})
-							.style("fill", function(d) { return "red"; })
-							.call(force.drag);
-
-					force.on("tick", function() {
-						node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"});
-					});
-				})();
-				</script>
 			</div>
 			<div class="col-md-6">
 				<div class="page-header">

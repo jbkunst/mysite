@@ -3,7 +3,7 @@ from .views import PostListAll, CategoryPostList, PostDetailView, RandomPostView
 from .feed import CategoryFeed, LatestPostsFeed
 
 urlpatterns = patterns('blog.views',
-	url(r'^$', PostListAll.as_view(), name='blog'),
+    url(r'^$', PostListAll.as_view(), name='blog'),
     url(r'^rss/$', LatestPostsFeed(), name='blog-rss'),
     url(r'^category/(?P<slug>[-\w]+)/$', CategoryPostList.as_view(), name='category'),
     url(r'^category/(?P<slug>[-\w]+)/rss/$', CategoryFeed()),
