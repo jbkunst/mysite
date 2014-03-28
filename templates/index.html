@@ -7,10 +7,16 @@
 				</div>
 				<p>Hello! I'm Joshua Kunst, a human being who likes the statistics, programming and visualization and (try to) join all this insteresting topics. I like share code and ideas, so please be free to take a tour in the site or comment if you want it.</p>
 				<p>You don't know here to start? Then go to my <a href="{% url 'blog' %}">lastest post</a>.</p>
+				<div class="page-header">
+					<h4>What I do</h4>
+				</div>
+				<p>
+					Use and love <a href="http://www.r-project.org/">R</a>. Learn <a href="http://d3js.org/">D3js</a>. Programming in <a href="http://www.python.org/">Python</a> & <a href="https://www.djangoproject.com/">Django</a> when I can. Play some <a href="http://www.dota2.com/">Dota2</a>. Play guitar when I need. Surf the web!			
+				</p>
 			</div>
 			<div class="col-md-3">
 				<div class="page-header">
-					<h4>Some Posts that I wrote</h4>
+					<h4>Post</h4>
 				</div>
 				<ul class="nav">
 					{% for post in some_posts %}
@@ -20,7 +26,7 @@
 			</div>
 			<div class="col-md-3">
 				<div class="page-header">
-					<h4>Topics in this site</h4>
+					<h4>Categories</h4>
 				</div>
 				<ul class="nav">
 					{% for category in categories %}
@@ -28,23 +34,7 @@
 					{% endfor %}
 				</ul>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="page-header">
-					<h4>Topics in this site <em>a la D3js</em></h4>
-				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="page-header">
-					<h4>Things that I like<!-- <span class="icon-iconmonstr-favorite-4-icon" style="color: #C3000D"></span> --></h4>
-				</div>
-				<p>
-					<a href="http://www.r-project.org/">R</a>, even if it is slow sometimes (Mmm...mmmaybe is how I write my code ;P). <a href="http://d3js.org/">D3js</a>. Even if it causes me headaches when I try to do something. <a href="http://www.python.org/">Python</a> & <a href="https://www.djangoproject.com/">Django</a>. <a href="http://www.dota2.com/">Dota2</a>. So addictive.
-				</p>
-			</div>
-		</div>
-		<div class="row">
 		</div>
 
 {% endblock content %}
