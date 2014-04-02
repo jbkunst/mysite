@@ -26,6 +26,8 @@ $(function () {
                 enabled: true
             },
             type: 'datetime',
+            min: Date.UTC(2003,  10, 1),
+            max: Date.UTC(new Date().getFullYear(),  new Date().getMonth() + 1, 29)
         },
 
         yAxis: {
@@ -39,17 +41,25 @@ $(function () {
         },
         tooltip: {
             formatter: function() {
+                    info = {
+                        'Studies': 'Mathematics and Master in Statistics at PUC',
+                        'Scoring Analyst': 'at Corpbanca',
+                        'Risk Analyst': 'at Equifax Chile',
+                        'Data Scientist': 'at Foris'
+                    }
                     return '<b>'+ this.series.name +'</b><br/>'+
-                    this.series.text;
+                    info[this.series.name];
             }
         },
         series: [
             {
-                name: 'Estudios I', lineWidth: 10, data: [ [Date.UTC(2004,  9, 27), 1 ], [Date.UTC(2010, 10, 10), 1 ], ]
+                name: 'Studies', lineWidth: 15, data: [ [Date.UTC(2004,  3, 1), 1 ], [Date.UTC(2009, 11, 01), 1 ], ]
             }, {
-                name: 'Trabajo 2', lineWidth: 10, data: [ [Date.UTC(2010, 10, 10), 2 ], [Date.UTC(2012,  9, 26), 2 ], ]
+                name: 'Scoring Analyst', lineWidth: 15, data: [ [Date.UTC(2010, 8, 1), 2 ], [Date.UTC(2011,  2, 1), 2 ], ]
             }, {
-                name: 'Trabajo III', lineWidth: 10, data: [ [Date.UTC(2012,  9, 26), 3 ], [Date.UTC(2014,  9, 14), 3], ]
+                name: 'Risk Analyst', lineWidth: 15, data: [ [Date.UTC(2011,  2, 1), 3 ], [Date.UTC(2013,  1, 1), 3], ]
+            }, {
+                name: 'Data Scientist', lineWidth: 15, data: [ [Date.UTC(2013,  1, 1), 4], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 4], ]
             }
         ]
     }
@@ -86,13 +96,8 @@ $(function () {
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-            ]
+            name: 'Statistics software/lenguaje',
+            data: [ ['R', 95], ['SAS', 2], ['STATA', 1], ['SPSS', 1], ]
         }]
     }
 
@@ -119,4 +124,41 @@ $(function () {
     $("#start-trip").on("click", function() {
         trip.start();
     });
+
+    var fill = d3.scale.category20();
+
+    var width = parseInt($("#container3").css("width"))
+    var height = parseInt($("#container3").css("height"))
+
+    d3.layout.cloud().size([width, height])
+        .words([
+            "Statistics", "R", "D3js", "Javascript", "Modelling", "Visualization", "Group",
+            "Github", "Python", "Django"].map(function(d) {
+                return {text: d, size: 25 + Math.random() * 20};
+            }))
+        .padding(5)
+        .rotate(function() { return Math.floor(Math.random() * 120) + 1 - 60; })
+        .font("Impact")
+        .fontSize(function(d) { return d.size; })
+        .on("end", draw)
+        .start();
+
+    function draw(words) {
+        d3.select("#container3").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+            .append("g")
+                .attr("transform", "translate(150,150)")
+            .selectAll("text")
+                .data(words)
+            .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .style("font-family", "Impact")
+            .style("fill", function(d, i) { return fill(i); })
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+        }
 });
