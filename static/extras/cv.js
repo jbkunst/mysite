@@ -1,6 +1,6 @@
 $(function () { 
 
-    // Highcharts
+// Highcharts
     Highcharts.setOptions({
         chart: {
             backgroundColor:"#111111",
@@ -102,7 +102,7 @@ $(function () {
 
     chart = new Highcharts.Chart(plot_options_interest);
 
-    // Trip
+// Trip
     trip_texts = [
         "asdas  asda sdas <br> asdasda sdas asda sdas d<br> asdasd asda",
         "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
@@ -111,10 +111,10 @@ $(function () {
     ]
 
     var trip = new Trip([
-        { sel : $("#timelinediv"), content : trip_texts[0], position : "n", expose : false, delay: 5000 },
+        { sel : $("#timelinediv"), content : trip_texts[0], position : "e", expose : false, delay: 5000 },
         { sel : $("#piediv"), content : trip_texts[1], position : "w", expose : false, delay: 5000 },
-        { sel : $("#bardiv"), content : trip_texts[2], position : "s", expose : false, delay: 5000 },
-        { sel : $("#linediv"), content : trip_texts[3], position : "w", expose : false, delay: 5000 },
+        { sel : $("#bardiv"), content : trip_texts[2], position : "w", expose : false, delay: 5000 },
+        { sel : $("#linediv"), content : trip_texts[3], position : "e", expose : false, delay: 5000 },
       ], {
         tripTheme : "white",
         animation: "fadeIn",
@@ -133,23 +133,27 @@ $(function () {
         trip.start();
     });
 
-    
-    // Wordcloud
+// Wordcloud
     var fill = d3.scale.category20();
     var width = parseInt($("#container3").css("width"))
     var height = parseInt($("#container3").css("height"))
 
-    var words =  ["Statistics", "R", "D3js", "Javascript", "Modelling", "Visualization", "Group",
-        "Github", "Python", "Django", "Arduino", "Guitar", "Music", "Programming",
-        "The smell of freshly-cut grass"]
-
-    words = words.map(function(d) { return {text: d, size: 15 + Math.random() * 10}; })
+    var words = [{text: "R", size: 25}, {text: "Statistics", size: 20}, {text: "D3JS", size: 25}, {text: "Javascript", size: 25},
+        {text: "Python", size: 20}, {text: "Modelling", size: 20}, {text: "Visualization", size: 20}, {text: "Github", size: 20},
+        {text: "Django", size: 20}, {text: "Arduino", size: 20}, {text: "Guitar", size: 20}, {text: "Music", size: 20},
+        {text: "Programming", size: 20}, {text: "The smell of freshly-cut grass", size: 10},
+        {text: "I don't like wordclouds", size: 10}, {text: "Predictions", size: 20}, {text: "Data", size: 25},
+        {text: "Domotic", size: 20}, {text: "", size: 20}, {text: "", size: 20}, {text: "", size: 20},
+        {text: "", size: 20}, {text: "", size: 20}, {text: "", size: 20}, {text: "", size: 20},
+        {text: "", size: 20}, {text: "", size: 20}, {text: "", size: 20}, {text: "", size: 20},]
 
     d3.layout.cloud().size([width, height])
         .words(words)
         .padding(5)
         .rotate(function() { return Math.floor(Math.random() * 120) + 1 - 60; })
-        .font("Impact")
+        //.rotate(function() { return ~~(Math.random() * 2) * 90; })
+        //.rotate(function() { return 0; })
+        .font("Open Sans")
         .fontSize(function(d) { return d.size; })
         .on("end", draw)
         .start();
@@ -172,4 +176,62 @@ $(function () {
             })
             .text(function(d) { return d.text; });
         }
+
+// Force Layout
+    var width = parseInt($("#container4").css("width"))
+    var height = parseInt($("#container4").css("height"))
+    var nodes = [
+        {
+            name: "Linkedin",
+            color: "#0E76A8",
+            ulr: "http://www.linkedin.com/in/joshuakunst",
+            path: "M 256.417,430c-113.771,0-206-92.229-206-206s 92.229-206, 206-206s 206,92.229, 206,206 S 370.188,430, 256.417,430z M 201.456,124.408l-45.229,0 L 156.227,270.531 l 45.229,0 L 201.456,124.408 z M 178.626,289.667c-14.771,0-26.746,12.072-26.746,26.963 s 11.975,26.963, 26.746,26.963c 14.77,0, 26.745-12.072, 26.745-26.963S 193.396,289.667, 178.626,289.667z M 370.953,124.408l-45.010,0  c0,0,0,55.666,0,76.703s-7.991,32.781-24.626,32.781c-18.103,0-27.562-12.231-27.562-32.781c0-22.504,0-76.703,0-76.703l-43.38,0  L 230.375,270.531 l 43.38,0 l0-19.679 c0,0, 13.047,24.137, 44.032,24.137c 30.986,0, 53.165-18.918, 53.165-58.058 C 370.953,177.791, 370.953,124.408, 370.953,124.408z"},
+        {
+            name: "g+",
+            color: "#DD1812",
+            ulr: "https://plus.google.com/+JoshuaKunst/posts",
+            path: "M 273.369,148.341c0-20.247-16.443-36.065-50.481-36.065c-26.625,0-45.852,16.854-45.852,37.1 c0,19.84, 22.562,36.957, 49.186,36.664C 255.762,186.039, 273.369,167.642, 273.369,148.341z M 462.417,223c0-113.771-92.229-206-206-206 s-206,92.229-206,206s 92.229,206, 206,206S 462.417,336.771, 462.417,223z M 296.303,150.695c0,18.691-6.979,30.903-28.096,46.725 c-21.417,15.619-26.65,24.443-6.208,40.248c 11.519,8.906, 19.591,20.778, 19.591,35.436c0,15.969-6.53,30.457-18.809,37.492l 17.404,0  l 14.816,15.551c0,0-55.854,0-66.303,0c-41.39,0-61.685-24.809-61.685-52.098c0-27.889, 19.132-49.854, 56.492-49.854  c-5.792-11.693-3.466-22.494, 6.011-30.217c-63.807,0-77.461-27.998-77.461-49.566c0-27.945, 32.123-44.559, 70.643-44.559 C 275.367,99.854, 296.303,127.766, 296.303,150.695z M 382.776,292.5l-30.589,0 l0,30.588 l-15.293,0 L 336.894,292.5 l-30.589,0 l0-15.294 l 30.589,0 l0-30.588  l 15.293,0 l0,30.588 l 30.589,0 L 382.776,292.5 z M 254.949,272.106c-3.083,23.466-18.371,42.719-36.234,43.256 c-17.869,0.532-29.854-17.427-26.767-40.899c 3.085-23.467, 20.067-39.859, 37.939-40.398 C 247.75,233.533, 258.031,248.637, 254.949,272.106z"},
+    ];
+    
+    var svg = d3.select("#container4")
+        .append("center")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var force = d3.layout.force()
+        .gravity(.10)
+        .distance(300)
+        .charge(-180)
+        .size([width, height]);
+
+    force.nodes(nodes).start();
+
+    var node = svg.selectAll(".node")
+            .data(nodes)
+        .enter().append("g")
+            .attr("class", "node")
+            .call(force.drag);
+
+    node.append("path")
+        .attr("d", function(d) { return d.path; })
+        .attr("transform", "scale(-0.1, 0.1) rotate(-180 100 100)")
+        .attr("class", function(d){ return d.class; })
+        .style("fill", function(d) { return "white"; })
+        .on("mouseover", function(d){
+            d3.select(this).transition().style("fill", d.color)
+        })
+        .on("mouseout", function(d){
+            d3.select(this).transition().style("fill", "white")
+        })
+        .on("click", function(d){
+            // window.open(d.url,'_blank');
+        });
+
+    force.on("tick", function() {
+        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"});
+    });
+
+
+
 });
