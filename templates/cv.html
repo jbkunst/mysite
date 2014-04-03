@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="http://cdn.knightlab.com/libs/timeline/latest/css/timeline.css">
-    <link href="https://rawgithub.com/EragonJ/Trip.js/master/src/trip.min.css" rel="stylesheet" type="text/css">
+    <link href="http://eragonj.github.io/Trip.js/src/trip.min.css" rel="stylesheet" type="text/css">
 {% endblock css %}
 
 {% block js %}
     {% load staticfiles %}
     <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="https://rawgithub.com/EragonJ/Trip.js/master/src/trip.min.js"></script>
+    <script src="http://eragonj.github.io/Trip.js/src/trip.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://rawgithub.com/jasondavies/d3-cloud/master/d3.layout.cloud.js"></script>
     <script src="{% static 'extras/cv.js' %}"></script>
@@ -16,44 +15,33 @@
 
 {% block content %}
         <div class="row">
-            <div class="col-md-12" id="start-trip">
+            <div class="col-md-10 col-md-offset-1" id="start-trip">
                     <h3>Welcome</h3>
             </div>
-            <div class="col-md-4 item" id="timelinediv">
+            <div class="col-md-5 item col-md-offset-1" id="experience">
                 <div class="page-header">
                     <h4>Experience</h4>
                 </div>
                 <div id="container" style="width:100%; height:200px;"></div>
             </div>
-            <div class="col-md-4 item" id="piediv">
+            <div class="col-md-5 item" id="interests">
                 <div class="page-header">
                     <h4>Interests</h4>
                 </div>
                 <div id="container2" style="width:100%; height:200px;"></div>
             </div>
-            <div class="col-md-4 item" id="bardiv">
+            <div class="col-md-5 item  col-md-offset-1" id="hobby">
                 <div class="page-header">
                     <h4>Hobby Space</h4>
                 </div>
                 <div id="container3" style="width:100%; height:200px;"></div>
             </div>
-            <div class="col-md-4 item" id="linediv">
+            <div class="col-md-5 item" id="otherplaces">
                 <div class="page-header">
-                    <h4>Other places where you can find me</h4>
+                    <h4>Other places...</h4>
                 </div>
                 <div id="container4" style="width:100%; height:200px"></div>
             </div>
-            <div class="col-md-4 item" id="linediv">
-                <div class="page-header">
-                    <h4>Do</h4>
-                </div>
-                <div id="container4" style="width:100%; height:200px;"></div>
-            </div>
-            <div class="col-md-4 item" id="linediv">
-                <div class="page-header">
-                    <h4>Do</h4>
-                </div>
-                <div id="container4" style="width:100%; height:200px;"></div>
-            </div>
         </div>
+        <br>
 {% endblock content %}

@@ -111,10 +111,11 @@ $(function () {
     ]
 
     var trip = new Trip([
-        { sel : $("#timelinediv"), content : trip_texts[0], position : "e", expose : false, delay: 5000 },
-        { sel : $("#piediv"), content : trip_texts[1], position : "w", expose : false, delay: 5000 },
-        { sel : $("#bardiv"), content : trip_texts[2], position : "w", expose : false, delay: 5000 },
-        { sel : $("#linediv"), content : trip_texts[3], position : "e", expose : false, delay: 5000 },
+        { sel : $("#experience"), content : trip_texts[0], position : "e", expose : false, delay: 5000 },
+        { sel : $("#interests"), content : trip_texts[1], position : "w", expose : false, delay: 5000 },
+        { sel : $("#hobby"), content : trip_texts[2], position : "s", expose : false, delay: 0 },
+        { sel : $("#hobby"), content : trip_texts[2], position : "n", expose : false, delay: 5000 },
+        { sel : $("#otherplaces"), content : trip_texts[3], position : "n", expose : false, delay: 5000 },
       ], {
         tripTheme : "white",
         animation: "fadeIn",
