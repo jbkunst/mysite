@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %}Resume{% endblock %}
+
 {% block css %}
     <link href="http://eragonj.github.io/Trip.js/src/trip.min.css" rel="stylesheet" type="text/css">
 {% endblock css %}
@@ -15,8 +17,8 @@
 
 {% block content %}
         <div class="row">
-            <div class="col-md-10 col-md-offset-1" >
-                    <h3>Resume<small>&nbsp;click <b id="start-trip">here</b> to tell you the story</small></h3>
+            <div class="col-md-11 col-md-offset-1" >
+                    <h3>Resume<small>&nbsp;click <a id="start-trip"><b>here</b></a> to tell you the story</small></h3>
             </div>
             <div class="col-md-5 item col-md-offset-1" id="experience">
                 <div class="page-header">

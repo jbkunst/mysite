@@ -8,9 +8,11 @@
 				<div class="page-header">
 					<h4>{{ post.title|title }}</h4>
 				</div>
-					<i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}<span class="tab"></span>
-					<i class="fa fa-archive"></i>&nbsp; {% for cat in post.category.all %}<a href="{% url 'category' cat.slug %}">{{ cat.name|title }} ({{ cat.counter }})</a>&nbsp;&nbsp{% endfor %}<span class="tab"></span>
-					<i class="fa fa-comments"></i>&nbsp;5 Comments
+					<small>
+						<i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}<span class="tab"></span>
+						<i class="fa fa-archive"></i>&nbsp; {% for cat in post.category.all %}<a href="{% url 'category' cat.slug %}">{{ cat.name|title }} ({{ cat.counter }})</a>&nbsp;&nbsp{% endfor %}<span class="tab"></span>
+						<i class="fa fa-comments"></i>&nbsp;5 Comments
+					</small>
 				<hr>
 {{ post.body|safe }}
 			<div id="disqus_thread"></div>
