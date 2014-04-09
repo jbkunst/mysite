@@ -17,33 +17,34 @@
 
 {% block content %}
         <div class="row">
-            <div class="col-md-11 col-md-offset-1" >
-                    <h3>Resume<small>&nbsp;click <a id="start-trip"><b>here</b></a> to tell you the story</small></h3>
-            </div>
-            <div class="col-md-5 item col-md-offset-1" id="experience">
+            <div class="col-md-10 col-md-offset-1" >
                 <div class="page-header">
-                    <h4>Experience</h4>
+                    <h3>Resume<small>&nbsp;click <a id="start-trip">here</a> to tell you the story, or just we can <a href="{% url 'index' %}">get back</a>.</small></h3>
                 </div>
-                <div id="container" style="width:100%; height:200px;"></div>
-            </div>
-            <div class="col-md-5 item" id="interests">
-                <div class="page-header">
-                    <h4>Interests</h4>
+                <div class="col-md-6 item" id="experience">
+                    <div class="page-header">
+                        <h4>Experience</h4>
+                    </div>
+                    <div id="container" style="width:100%; height:200px;"></div>
                 </div>
-                <div id="container2" style="width:100%; height:200px;"></div>
-            </div>
-            <div class="col-md-5 item  col-md-offset-1" id="hobby">
-                <div class="page-header">
-                    <h4>Hobby Space</h4>
+                <div class="col-md-6 item" id="interests">
+                    <div class="page-header">
+                        <h4>Interests</h4>
+                    </div>
+                    <div id="container2" style="width:100%; height:200px;"></div>
                 </div>
-                <div id="container3" style="width:100%; height:200px;"></div>
-            </div>
-            <div class="col-md-5 item" id="otherplaces">
-                <div class="page-header">
-                    <h4>Other places...</h4>
+                <div class="col-md-6 item" id="hobby">
+                    <div class="page-header">
+                        <h4>Hobby Space</h4>
+                    </div>
+                    <div id="container3" style="width:100%; height:200px;"></div>
                 </div>
-                <div id="container4" style="width:100%; height:200px"></div>
+                <div class="col-md-6 item" id="otherplaces">
+                    <div class="page-header">
+                        <h4>Other places...</h4>
+                    </div>
+                    <div id="container4" style="width:100%; height:200px"></div>
+                </div>
             </div>
         </div>
-        <br>
 {% endblock content %}

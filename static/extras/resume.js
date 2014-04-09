@@ -102,38 +102,6 @@ $(function () {
 
     chart = new Highcharts.Chart(plot_options_interest);
 
-// Trip
-    trip_texts = [
-        "asdas  asda sdas <br> asdasda sdas asda sdas d<br> asdasd asda",
-        "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
-        "wrtsda aa sae adfadfsdfsdfsdf sdf sdfsdf <br> asdasd asdasd asda",
-        "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
-    ]
-
-    var trip = new Trip([
-        { sel : $("#experience"), content : trip_texts[0], position : "e", delay: 5000 },
-        { sel : $("#interests"), content : trip_texts[1], position : "w", delay: 5000 },
-        { sel : $("#hobby"), content : "", position : "s", delay: 0.00001 },
-        { sel : $("#hobby"), content : trip_texts[2], position : "n", delay: 5000 },
-        { sel : $("#otherplaces"), content : trip_texts[3], position : "n", delay: 5000 },
-      ], {
-        tripTheme : "white",
-        animation: "fadeIn",
-        backToTopWhenEnded : true,
-        onTripChange : function(i, tripData) {
-            console.log(i)
-            $(".item").css("opacity", .1)
-            tripData.sel.css("opacity", 1)
-        },
-        onTripEnd : function() {
-            $(".item").css("opacity", 1)
-        },
-      });
-
-    $("#start-trip").on("click", function() {
-        trip.start();
-    });
-
 // Wordcloud
     var fill = d3.scale.category20();
     var width = parseInt($("#container3").css("width"))
@@ -233,6 +201,36 @@ $(function () {
         node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"});
     });
 
+// Trip
+    trip_texts = [
+        "asdas  asda sdas <br> asdasda sdas asda sdas d<br> asdasd asda",
+        "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
+        "wrtsda aa sae adfadfsdfsdfsdf sdf sdfsdf <br> asdasd asdasd asda",
+        "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
+    ]
 
+    var trip = new Trip([
+        { sel : $("#experience"), content : trip_texts[0], position : "e", delay: 3000 },
+        { sel : $("#interests"), content : trip_texts[1], position : "w", delay: 3000 },
+        { sel : $("#hobby"), content : trip_texts[2], position : "e", delay: 3000 },
+        { sel : $("#otherplaces"), content : trip_texts[3], position : "w", delay: 3000 },
+      ], {
+        tripTheme : "white",
+        animation: "fadeIn",
+        backToTopWhenEnded : true,
+        onTripChange : function(i, tripData) {
+            $('html,body').animate({ scrollTop: tripData.sel.offset().top - 50}, 'slow');
+            $(".item").css("opacity", .1)
+            tripData.sel.css("opacity", 1)
+
+        },
+        onTripEnd : function() {
+            $(".item").css("opacity", 1)
+        },
+      });
+
+    $("#start-trip").on("click", function() {
+        trip.start();
+    });
 
 });
