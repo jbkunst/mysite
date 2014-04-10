@@ -203,26 +203,41 @@ $(function () {
 
 // Trip
     trip_texts = [
-        "asdas  asda sdas <br> asdasda sdas asda sdas d<br> asdasd asda",
-        "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
-        "wrtsda aa sae adfadfsdfsdfsdf sdf sdfsdf <br> asdasd asdasd asda",
-        "wrtsda aa sae adfadfsdfsdfsdfas da s<br> asdasda sadfasaas sdf sdfsdf",
+        "I haz some <b>codez</b> skills",
+        "Visualization is the better way to <b>comunicate</b> something,<br> so I learn this topic every day",
+        "Someone said digging into the <b>data</b>?",
+        "I <b>enjoy</b> join data and new js libraries :)",
+        "I studied statistics.<br>Actually I'm a statistician and developer at Foris",
+        "My interests are all related to programming,<br>and predictive models",
+        "I (<i class='fa fa-heart-o'></i>|try to do|like) a lot of things",
+        "You can find me in various places!",
     ]
 
     var trip = new Trip([
-        { sel : $("#experience"), content : trip_texts[0], position : "e", delay: 3000 },
-        { sel : $("#interests"), content : trip_texts[1], position : "w", delay: 3000 },
-        { sel : $("#hobby"), content : trip_texts[2], position : "e", delay: 3000 },
-        { sel : $("#otherplaces"), content : trip_texts[3], position : "w", delay: 3000 },
+        { sel : $("#codez"), content : trip_texts[0], position : "s", delay: 3000 },
+        { sel : $("#stats"), content : trip_texts[1], position : "s", delay: 3000 },
+        { sel : $("#data"), content : trip_texts[2], position : "s", delay: 3000 },
+        { sel : $("#experiment"), content : trip_texts[3], position : "s", delay: 3000 },
+        { sel : $("#experience"), content : trip_texts[4], position : "e", delay: 4000 },
+        { sel : $("#interests"), content : trip_texts[5], position : "w", delay: 4000 },
+        { sel : $("#hobby"), content : trip_texts[6], position : "e", delay: 4000 },
+        { sel : $("#otherplaces"), content : trip_texts[7], position : "w", delay: 4000 },
       ], {
         tripTheme : "white",
         animation: "fadeIn",
         backToTopWhenEnded : true,
         onTripChange : function(i, tripData) {
-            $('html,body').animate({ scrollTop: tripData.sel.offset().top - 50}, 'slow');
-            $(".item").css("opacity", .1)
-            tripData.sel.css("opacity", 1)
-
+            selectors = ["#experience", "#interests", "#hobby", "#otherplaces"];
+            $('html,body').animate({ scrollTop: tripData.sel.offset().top - 100}, 'slow');
+            if(_.contains(selectors, tripData.sel.selector)){
+                $(".item").css("opacity", .1);
+                tripData.sel.css("opacity", 1);
+            } else {
+                $(tripData.sel.selector + " > i").css("color", "white")
+                _.each(selectors, function(d){
+                    $(d).css("opacity", .1);
+                })
+            }
         },
         onTripEnd : function() {
             $(".item").css("opacity", 1)
