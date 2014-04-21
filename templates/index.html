@@ -4,30 +4,26 @@
 
 {% block content %}
         <div class="row">
-            <div class="col-md-10 col-md-offset-1" >
+            <div class="col-md-7 col-md-offset-1">
                 <div class="page-header">
-                    <h3>Welcome<small>&nbsp;to my <em>e</em>place</small></h3>
+                    <h4>Welcome<small>&nbsp;to my <em>e</em>place</small></h4>
                 </div>
-                <div class="col-md-6">
-                    <div class="page-header">
-                        <h4>Who I am</h4>
-                    </div>
-                    <p>I'm Joshua Kunst, a human being who likes the statistics, programming and visualization and (try to) join all this insteresting topics (check my <a href="{% url 'resume' %}">resume</a>). I like share code and ideas, so please be free to take a tour in the site or comment if you want it.</p>
-                    <p>I use and love <a href="http://www.r-project.org/">R</a>. Learn <a href="http://d3js.org/">D3js</a>. Programming in <a href="http://www.python.org/">Python</a> & <a href="https://www.djangoproject.com/">Django</a> when I can. Play some <a href="http://www.dota2.com/">Dota2</a>. Play guitar when I need. Surf the web!</p>
-                    <p>You don't know here to start? Then go to my <a href="{% url 'blog' %}">lastest posts</a>.</p>
-                    
+                <p>I'm Joshua Kunst, a human being who likes the statistics, programming and visualization and (try to) join all this insteresting topics (check the <a href="{% url 'about' %}">about</a> page). I like share code and ideas, so please be free to take a tour in the site or comment if you want it.</p>
+                <p>I use and love <a href="http://www.r-project.org/">R</a>. Learn <a href="http://d3js.org/">D3js</a>. Programming in <a href="http://www.python.org/">Python</a> & <a href="https://www.djangoproject.com/">Django</a> when I can. Play some <a href="http://www.dota2.com/">Dota2</a>. Play guitar when I need. Surf the web!</p>
+                <p>You don't know here to start? Then go to my <a href="{% url 'blog' %}">lastest posts</a>.</p>
+                
+            </div>
+            <div class="col-md-3">
+                <div class="page-header">
+                    <h4>Categories</h4>
                 </div>
-                <div class="col-md-3">
-                    <div class="page-header">
-                        <h4>Categories</h4>
-                    </div>
-                    <ul class="nav">
-                        {% for category in categories %}
-                        <li><a href="{% url 'category' category.slug %}" class="asidebar"><span class="badge pull-right">{{ category.counter }}</span>{{ category.name|title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-md-3">
+                <ul class="nav">
+                    {% for category in categories %}
+                    <li><a href="{% url 'category' category.slug %}" class="asidebar"><span class="badge pull-right">{{ category.counter }}</span>{{ category.name|title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+                <!-- <div class="col-md-3">
                     <div class="page-header">
                         <h4>Post</h4>
                     </div>
@@ -36,7 +32,7 @@
                         <li><a href="{% url 'post' post.slug %}" class="asidebar">{{ post.title|title }}</a></li>
                         {% endfor %}
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
 {% endblock content %}

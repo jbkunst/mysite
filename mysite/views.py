@@ -4,9 +4,9 @@ class IndexView(TemplateView):
     
     template_name = "index.html"
 
-class ResumeView(TemplateView):
+class AboutView(TemplateView):
     
-    template_name = "resume.html"
+    template_name = "about.html"
 
 class RobotsTextView(TemplateView):
     # thanks to https://github.com/nkuttler/django-robots-txt
