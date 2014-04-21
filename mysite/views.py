@@ -8,6 +8,10 @@ class AboutView(TemplateView):
     
     template_name = "about.html"
 
+class PortfolioView(TemplateView):
+    
+    template_name = "portfolio.html"
+
 class RobotsTextView(TemplateView):
     # thanks to https://github.com/nkuttler/django-robots-txt
     template_name = 'robots.txt'

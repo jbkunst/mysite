@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from .views import IndexView, AboutView, RobotsTextView
+from .views import IndexView, AboutView, PortfolioView, RobotsTextView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -20,6 +20,7 @@ sitemaps = {
 urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='index'),
     url(r'^about/$', AboutView.as_view(), name='about'),
+    url(r'^portfolio/$', PortfolioView.as_view(), name='portfolio'),
     url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     url(r'^robots.txt$', RobotsTextView.as_view(), name='robots'),
     url(r'^blog/', include('blog.urls')),

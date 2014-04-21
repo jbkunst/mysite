@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block css %}
+    <link href="http://eragonj.github.io/Trip.js/src/trip.min.css" rel="stylesheet" type="text/css">
+{% endblock css %}
+
+{% block js %}
+    {% load staticfiles %}
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://eragonj.github.io/Trip.js/src/trip.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://rawgithub.com/jasondavies/d3-cloud/master/d3.layout.cloud.js"></script>
+    <script src="{% static 'extras/resume.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="page-header">
+                    <h3>Portfolio<small>&nbsp;click <span id="start-trip"><a href="#">here</a></span> to tell you the story, or just we can <span><a href="{% url 'index' %}">get back</a></span>.</small></h3>
+                </div>
+                <div class="row">          
+                    <div class="col-md-4 item text-center" id="codez">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon icon-iconmonstr-code-8-icon"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="stats">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon icon-iconmonstr-line-chart-4-icon"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="data">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon icon-iconmonstr-database-9-icon"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="experiment">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon fa fa-flask fa-4x"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="codez">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon icon-iconmonstr-code-8-icon"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="stats">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon icon-iconmonstr-line-chart-4-icon"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="data">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon icon-iconmonstr-database-9-icon"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="experiment">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon fa fa-flask fa-4x"></i>
+                    </div>
+                    <div class="col-md-4 item text-center" id="experiment">
+                        <div class="page-header">
+                            <h3>Some work</h3>
+                        </div>
+                        <i class="resume-icon fa fa-flask fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}
