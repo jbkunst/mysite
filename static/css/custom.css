@@ -24,6 +24,10 @@ span.tab{
     padding: 0 10px; /* Or desired space*/
 }
 
+a {
+	font-weight: bolder;
+}
+
 body {
 	/*font-family: 'Ubuntu', sans-serif;*/
 	font-family: 'Open Sans', sans-serif;
@@ -51,13 +55,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	opacity: 0.95;
 	color: #FFFFFF;
 }
-
-/*.dib {
-	background-color: #111111;
-	opacity: 0.95;
-	color: #FFFFFF;
-	margin-top: 10px;
-}*/
 
 .img-thumbnail {
 	margin: 0.5em;

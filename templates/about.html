@@ -4,6 +4,21 @@
 
 {% block css %}
     <link href="http://eragonj.github.io/Trip.js/src/trip.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="http://iamceege.github.io/tooltipster/css/tooltipster.css"/>
+    <style type="text/css">
+        .tooltipster-light {
+            border-radius: 5px; 
+            border: 1px solid #cccccc;
+            background: #ededed;
+            color: #666666;
+        }
+        .tooltipster-light .tooltipster-content {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 8px 10px;
+        }
+    </style>
 {% endblock css %}
 
 {% block js %}
@@ -13,6 +28,7 @@
     <script src="http://eragonj.github.io/Trip.js/src/trip.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://rawgithub.com/jasondavies/d3-cloud/master/d3.layout.cloud.js"></script>
+    <script type="text/javascript" src="http://iamceege.github.io/tooltipster/js/jquery.tooltipster.js"></script>
     <script src="{% static 'extras/resume.js' %}"></script>
 {% endblock js %}
 
@@ -20,7 +36,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="page-header">
-                    <h3>Resume<small>&nbsp;click <span id="start-trip"><a href="#">here</a></span> to tell you the story, or just we can <span><a href="{% url 'index' %}">get back</a></span>.</small></h3>
+                    <h3>About<small>&nbsp;click <span id="start-trip"><a href="#">here</a></span> to tell you the story, or just we can <span><a href="{% url 'index' %}">get back</a></span>.</small></h3>
                 </div>
                 <div class="row">          
                     <div class="col-md-12 item" id="summary">
