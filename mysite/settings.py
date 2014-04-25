@@ -36,8 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    'django.contrib.sites',
     'django.contrib.sitemaps',
+    'blog',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -98,6 +100,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 SITE_URL = 'jkunst.com'
+
+SITE_ID = 1
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
