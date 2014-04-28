@@ -24,10 +24,6 @@ span.tab{
     padding: 0 10px; /* Or desired space*/
 }
 
-a {
-	font-weight: bolder;
-}
-
 body {
 	/*font-family: 'Ubuntu', sans-serif;*/
 	font-family: 'Open Sans', sans-serif;
