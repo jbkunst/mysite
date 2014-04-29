@@ -146,3 +146,7 @@ a.asidebar:hover{
 .trip-content {
 	font-size: 20px;
 }
+
+pre {
+	font-size: 0.8em;
+}
