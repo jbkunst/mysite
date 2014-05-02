@@ -20,6 +20,11 @@ html {
 	background-size: cover;
 }
 
+.index-pad {
+	padding-top: 50px;
+	padding-bottom: 50px
+}
+
 span.tab{
     padding: 0 10px; /* Or desired space*/
 }
