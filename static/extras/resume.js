@@ -5,7 +5,7 @@ $(function () {
         chart: {
             backgroundColor:"#111111",
             style: {
-                fontFamily: 'Open Sans',
+                fontFamily: 'Lato',
             },
         },
         title: {
@@ -120,7 +120,7 @@ $(function () {
         .rotate(function() { return Math.floor(Math.random() * 120) + 1 - 60; })
         //.rotate(function() { return ~~(Math.random() * 2) * 90; })
         //.rotate(function() { return 0; })
-        .font("Open Sans")
+        .font("Lato")
         .fontSize(function(d) { return d.size; })
         .on("end", draw)
         .start();
@@ -135,7 +135,7 @@ $(function () {
                 .data(words)
             .enter().append("text")
             .style("font-size", function(d) { return d.size + "px"; })
-            .style("font-family", 'Open Sans')
+            .style("font-family", 'Lato')
             .style("fill", function(d, i) { return fill(i); })
             .attr("text-anchor", "middle")
             .attr("transform", function(d) {
