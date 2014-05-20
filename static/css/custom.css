@@ -38,13 +38,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	line-height: 1.1;
 }
 
-.navbar-brand {
-	float: left;
-	padding: 14px 14px;
-	font-size: 18px;
-	line-height: 21px;
-}
-
 .row {
 	background-color: #111111;
 	opacity: 0.95;
@@ -53,6 +46,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .img-thumbnail {
 	margin: 0.5em;
+}
+
+.navbar-brand {
+	float: left;
+	padding: 14px 14px;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.iconslinks {
+	color: #333333;
+	background-color: #121212;
+	height: 50px;
+}
+
+.fa-stack{
+	padding-top: 5px;
 }
 
 a, a:hover {
@@ -74,20 +84,9 @@ a.asidebar:hover{
 	color: #000000;
 }
 
-.nav > li > a {
-    position: relative;
-    display: block;
-    padding: 5px 5px;
-}
-
-.nav > li > a:focus {
-    text-decoration: none;
-    background-color: rgb(0, 0, 0) !important;
-}
-
 .nav-icon {
-	color: #484848;
-	font-size: 2.5em;
+	color: #333;
+	/*font-size: 2.5em;*/ /* if else fontawsome or fonticons custom*/
 	padding-left: 0.0em;
 	padding-right: 0.0em;
 	-webkit-transition: color 0.2s linear;
@@ -101,8 +100,12 @@ a.asidebar:hover{
 	color: #7FBB00;
 }
 
+.about:hover {
+	color: #ADD8E6;
+}
+
 .mail:hover {
-	color: #F0F0F0;
+	color: #666633;
 }
 
 .rss:hover {
@@ -126,7 +129,7 @@ a.asidebar:hover{
 }
 
 .git-hub:hover {
-	color: #FFFFFF;
+	color: #000000;
 }
 
 .linkedin:hover {
