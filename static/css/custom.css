@@ -63,6 +63,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .fa-stack{
 	padding-top: 5px;
+	padding-left: 3px;
+}
+
+.fa-inverse {
+	color: #EEE;
 }
 
 a, a:hover {
@@ -86,9 +91,6 @@ a.asidebar:hover{
 
 .nav-icon {
 	color: #333;
-	/*font-size: 2.5em;*/ /* if else fontawsome or fonticons custom*/
-	padding-left: 0.0em;
-	padding-right: 0.0em;
 	-webkit-transition: color 0.2s linear;
 	-moz-transition: color 0.2s linear;
 	-ms-transition: color 0.2s linear;
@@ -101,7 +103,7 @@ a.asidebar:hover{
 }
 
 .about:hover {
-	color: #ADD8E6;
+	color: #880000;
 }
 
 .mail:hover {
@@ -141,8 +143,9 @@ a.asidebar:hover{
 }
 
 .resume-icon {
-	font-size: 150px;
+	font-size: 70px;
 	color: gray ;
+	padding: 20px;
 }
 
 .trip-content {

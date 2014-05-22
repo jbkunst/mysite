@@ -144,10 +144,9 @@ $(function () {
             .text(function(d) { return d.text; });
         }
 
-// Force Layout
+// Other places
     var width = parseInt($("#container4").css("width"))
     var height = parseInt($("#container4").css("height"))
-    // paths in jb-custom-font.dev.svg
     var nodes = [
         {
             name: "Github",
@@ -193,53 +192,7 @@ $(function () {
         },
     ];
     
-    var svg = d3.select("#container4")
-        .append("center")
-        .append("svg")
-        .attr("width", width)
-        .attr("height", height);
-
-    var force = d3.layout.force()
-        .gravity(.10)
-        .distance(300)
-        .charge(-180)
-        .size([width, height]);
-
-    force.nodes(nodes).start();
-
-    var node = svg.selectAll(".node")
-            .data(nodes)
-        .enter().append("g")
-            .attr("class", "node")
-            .call(force.drag);
-
-    node.append("path")
-        .attr("d", function(d) { return d.path; })
-        .attr("transform", "scale(-0.1, 0.1) rotate(-180 100 100)")
-        .style("fill", function(d) { return d.color })
-        .attr("title", function(d) { return d.name })
-        .attr("id", function(d) { return d.name + "_icon" })
-        .on("mouseover", function(d){
-            $(this).tooltipster({
-                content: d.name,
-                theme: "tooltipster-light",
-                position: "bottom",
-                offsetX: 21,
-                offsetY: 42,
-            })
-            .tooltipster("show")
-        })
-        .on("mouseout", function(d){
-            $(this).tooltipster("destroy")
-        })
-        .on("click", function(d){
-            window.open(d.url,'_blank');
-        });
-
-    force.on("tick", function() {
-        node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"});
-    });
-
+  
 
 // Trip
     trip_texts = [
@@ -247,8 +200,8 @@ $(function () {
         "Visualization is the better way to <b>comunicate</b> something,<br> so I learn this topic every day",
         "Someone said digging into the <b>data</b>?",
         "I <b>enjoy</b> join data and new js libraries :)",
-        "I studied statistics.<br>Actually I'm a statistician and developer at Foris",
-        "My interests are all related to programming,<br>and predictive models",
+        "I studied statistics.<br>Actually I'm a statistician and developer (a <i>DatArtist</i>) at Foris",
+        "My interests are all related to programming<br>and predictive models",
         "I (<i class='fa fa-heart-o'></i>|try to do|like) a lot of things",
         "You can find me in various places!",
     ]
@@ -256,12 +209,12 @@ $(function () {
     var trip = new Trip([
         { sel : $("#codez"), content : trip_texts[0], position : "s", delay: 3000 },
         { sel : $("#stats"), content : trip_texts[1], position : "s", delay: 3000 },
-        { sel : $("#data"), content : trip_texts[2], position : "s", delay: 3000 },
-        { sel : $("#experiment"), content : trip_texts[3], position : "s", delay: 3000 },
-        { sel : $("#experience"), content : trip_texts[4], position : "e", delay: 4000 },
-        { sel : $("#interests"), content : trip_texts[5], position : "w", delay: 4000 },
-        { sel : $("#hobby"), content : trip_texts[6], position : "e", delay: 4000 },
-        { sel : $("#otherplaces"), content : trip_texts[7], position : "w", delay: 4000 },
+        { sel : $("#data"), content : trip_texts[2], position : "n", delay: 3000 },
+        { sel : $("#experiment"), content : trip_texts[3], position : "n", delay: 3000 },
+        { sel : $("#experience"), content : trip_texts[4], position : "w", delay: 4000 },
+        { sel : $("#interests"), content : trip_texts[5], position : "e", delay: 4000 },
+        { sel : $("#hobby"), content : trip_texts[6], position : "w", delay: 4000 },
+        { sel : $("#otherplaces"), content : trip_texts[7], position : "e", delay: 4000 },
       ], {
         tripTheme : "white",
         animation: "fadeIn",
