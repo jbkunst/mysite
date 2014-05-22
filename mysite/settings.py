@@ -54,6 +54,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'blog.context_processors.blog',
+    'mysite.context_processors.themes'
 )
 
 ROOT_URLCONF = 'mysite.urls'

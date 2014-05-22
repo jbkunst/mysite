@@ -1,15 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
-
-html {
-	background: url('images/forest.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
 .index-pad {
 	padding-top: 50px;
 	padding-bottom: 50px
@@ -68,11 +58,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .fa-inverse {
 	color: #EEE;
-}
-
-a, a:hover {
-	color: #7FBB00;
-	text-decoration: none;
 }
 
 a.asidebar:link{
