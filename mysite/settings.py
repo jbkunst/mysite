@@ -39,7 +39,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'blog',
-    'mysite'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -54,7 +53,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'blog.context_processors.blog',
-    'mysite.context_processors.themes'
+    'blog.context_processors.random_theme',
 )
 
 ROOT_URLCONF = 'mysite.urls'
