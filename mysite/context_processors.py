@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*
 import datetime
-from mysite import settings
+from django.conf import settings
 import random
 
 
