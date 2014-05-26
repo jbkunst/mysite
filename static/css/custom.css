@@ -74,69 +74,21 @@ a.asidebar:hover{
 	color: #000000;
 }
 
-.nav-icon {
-	color: #333;
-	-webkit-transition: color 0.2s linear;
-	-moz-transition: color 0.2s linear;
-	-ms-transition: color 0.2s linear;
-	-o-transition: color 0.2s linear;
-	transition: color 0.2s linear;
-}
-
-.home:hover {
-	color: #7FBB00;
-}
-
-.about:hover {
-	color: #880000;
-}
-
-.mail:hover {
-	color: #666633;
-}
-
-.rss:hover {
-	color: #EE802F;
-}
-
-.stackoverflow:hover {
-	color: #EF8236;
-}
-
-.twitter:hover {
-	color: #00ACEE;
-}
-
-.google-plus:hover {
-	color: #DD1812;
-}
-
-.last-fm:hover {
-	color: #C3000D;
-}
-
-.git-hub:hover {
-	color: #000000;
-}
-
-.linkedin:hover {
-	color: #0E76A8;
-}
-
-.random:hover {
-	color: #FFCC33;
-}
-
-.resume-icon {
-	font-size: 70px;
-	color: gray ;
-	padding: 20px;
-}
-
 .trip-content {
 	font-size: 20px;
 }
 
 pre {
 	font-size: 0.8em;
+}
+
+.summary-icon {
+	padding: 15px;
+	font-size: 70px;
+	color: gray;
+}
+
+.place-icon {
+	padding: 50px;
+	font-size: 30px;
 }

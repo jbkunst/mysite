@@ -1,5 +1,5 @@
 html {
-	background: url('images/clouds.jpg') no-repeat center center fixed;
+	background: url('images/yellow_forest.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -7,6 +7,6 @@ html {
 }
 
 a, a:hover {
-	color: #A9A9F5;
+	color: #FFD801;
 	text-decoration: none;
 }
