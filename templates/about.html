@@ -10,6 +10,16 @@
             width:100%;
             height:250px
         }
+        .summary-icon {
+          padding: 15px;
+          padding-left: 30px;
+          padding-right: 30px;
+          font-size: 75px;
+          color: gray;
+        }
+        .item{
+          padding-bottom: 40px;
+        }
         .tooltipster-light {
             border-radius: 5px; 
             border: 1px solid #cccccc;
@@ -43,24 +53,18 @@
                     <h3>About<small>&nbsp;click <span id="start-trip"><a href="#">here</a></span> to tell you the story, or just we can <span><a href="{% url 'index' %}">get back</a></span>.</small></h3>
                 </div>
                 <div class="row">          
-                    <div class="col-md-6 item" id="summary">
+                    <div class="col-md-12 item" id="summary">
                         <div class="page-header">
                             <h4>Summary</h4>
                         </div>
-                        <div class="col-md-6 item text-center" id="codez">
-                            <i class="summary-icon fa fa-terminal"></i>
-                        </div>
-                        <div class="col-md-6 item text-center" id="stats">
-                            <i class="summary-icon fa fa-bar-chart-o"></i>
-                        </div>
-                        <div class="col-md-6 item text-center" id="data">
-                            <i class="summary-icon fa fa-database"></i>
-                        </div>
-                        <div class="col-md-6 item text-center" id="experiment">
-                            <i class="summary-icon fa fa-flask"></i>
+                        <div class="text-center">
+                          <i id="codez" class="summary-icon fa fa-terminal"></i>
+                          <i id="stats" class="summary-icon fa fa-bar-chart-o"></i>
+                          <i id="data" class="summary-icon fa fa-database"></i>
+                          <i id="experiment" class="summary-icon fa fa-flask"></i>
                         </div>
                     </div>
-                    <div class="col-md-6 item" id="experience">
+                    <div class="col-md-12 item" id="experience">
                         <div class="page-header">
                             <h4>Experience</h4>
                         </div>
@@ -78,47 +82,32 @@
                         </div>
                         <div id="container3" class="container-info"></div>
                     </div>
-                    <div class="col-md-6 item" id="otherplaces">
+                    <div class="col-md-12 item" id="otherplaces">
                         <div class="page-header">
                             <h4>Where I am</h4>
                         </div>
-                        <div id="container4" class="container-info">
-                            <a href="https://github.com/jbkunst/" target="_blank">
-                                 <span class="fa-stack fa-lg git-hub icon place-icon">
-                                      <i class="fa fa-square fa-stack-2x"></i>
-                                      <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
-                                 </span>
-                            </a>
-                            <a href="https://plus.google.com/+JoshuaKunst/posts" target="_blank">
-                                 <span class="fa-stack fa-lg google-plus icon place-icon">
-                                      <i class="fa fa-square fa-stack-2x"></i>
-                                      <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                                 </span>
-                            </a>
-                            <a href="http://www.linkedin.com/in/joshuakunst" target="_blank">
-                                 <span class="fa-stack fa-lg linkedin icon place-icon">
-                                      <i class="fa fa-square fa-stack-2x"></i>
-                                      <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                                 </span>
-                            </a>
-                            <a href="https://twitter.com/jbkunst" target="_blank">
-                                 <span class="fa-stack fa-lg twitter icon place-icon">
-                                      <i class="fa fa-square fa-stack-2x"></i>
-                                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                 </span>
-                            </a>
-                            <a href="mailto:jbkunst@gmail.com">
-                                 <span class="fa-stack fa-lg mail icon place-icon">
-                                      <i class="fa fa-square fa-stack-2x"></i>
-                                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                                 </span>
-                            </a>                            
-                            <a href="http://stackoverflow.com/users/829971/jbkunst" target="_blank">
-                                 <span class="fa-stack fa-lg stack-overflow icon place-icon">
-                                      <i class="fa fa-square fa-stack-2x"></i>
-                                      <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                                 </span>
-                            </a>                            
+                        <div id="container4" class="text-center">
+                          <a href="http://github.com/jbkunst/" target="_blank">
+                            <i class="fa fa-github-alt fa-inverse git-hub icon summary-icon"></i>
+                          </a>
+                          <a href="https://plus.google.com/+JoshuaKunst/posts" target="_blank">
+                            <i class="fa fa-google-plus fa-inverse google-plus icon summary-icon"></i>
+                          </a>
+                          <a href="http://www.linkedin.com/in/joshuakunst" target="_blank">
+                            <i class="fa fa-linkedin fa-inverse linkedin icon summary-icon"></i>
+                          </a>
+                          <a href="https://twitter.com/jbkunst" target="_blank">
+                            <i class="fa fa-twitter fa-inverse twitter icon summary-icon"></i>
+                          </a>
+                          <a href="mailto:jbkunst@gmail.com">
+                            <i class="fa fa-envelope fa-inverse mail icon summary-icon"></i>
+                          </a>                            
+                          <a href="http://stackoverflow.com/users/829971/jbkunst" target="_blank">
+                            <i class="fa fa-stack-overflow fa-inverse stack-overflow icon summary-icon"></i>
+                          </a>
+                          <a href="http://open.spotify.com/user/jbkunst" target="_blank">
+                            <i class="fa fa-spotify fa-inverse spotify icon summary-icon"></i>
+                          </a>
                         </div>
                     </div>
                 </div>
