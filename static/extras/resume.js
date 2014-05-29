@@ -45,7 +45,8 @@ $(function () {
         tooltip: {
             formatter: function() {
                     info = {
-                        "Studies": "Mathematics and Master in Statistics at PUC",
+                        "Studies": "Mathematics degree at PUC",
+                        "Studies": "Master in Statistics at PUC",
                         "Scoring Analyst": "at Corpbanca",
                         "Risk Analyst": "at Equifax Chile",
                         "Data Scientist": "at Foris"
@@ -55,15 +56,11 @@ $(function () {
             }
         },
         series: [
-            {
-                name: "Studies", lineWidth: 15, data: [ [Date.UTC(2004,  3, 1), 1 ], [Date.UTC(2009, 11, 01), 1 ], ]
-            }, {
-                name: "Scoring Analyst", lineWidth: 15, data: [ [Date.UTC(2010, 8, 1), 2 ], [Date.UTC(2011,  2, 1), 2 ], ]
-            }, {
-                name: "Risk Analyst", lineWidth: 15, data: [ [Date.UTC(2011,  2, 1), 3 ], [Date.UTC(2013,  1, 1), 3], ]
-            }, {
-                name: "Data Scientist", lineWidth: 15, data: [ [Date.UTC(2013,  1, 1), 4], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 4], ]
-            }
+            { name: "Studies", lineWidth: 15, data: [ [Date.UTC(2004,  3, 1), 0 ], [Date.UTC(2007, 11, 01), 0 ], ] },
+            { name: "Studies", lineWidth: 15, data: [ [Date.UTC(2008,  3, 1), 1 ], [Date.UTC(2009, 11, 01), 1 ], ] },
+            { name: "Scoring Analyst", lineWidth: 15, data: [ [Date.UTC(2010, 8, 1), 2 ], [Date.UTC(2011,  2, 1), 2 ], ] },
+            { name: "Risk Analyst", lineWidth: 15, data: [ [Date.UTC(2011,  2, 1), 3 ], [Date.UTC(2013,  1, 1), 3], ] },
+            { name: "Data Scientist", lineWidth: 15, data: [ [Date.UTC(2013,  1, 1), 4], [Date.UTC(new Date().getFullYear(),  new Date().getMonth(), 1), 4], ] }
         ]
     }
 

@@ -48,69 +48,75 @@
 
 {% block content %}
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="page-header">
-                    <h3>About<small>&nbsp;click <span id="start-trip"><a href="#">here</a></span> to tell you the story, or just we can <span><a href="{% url 'index' %}">get back</a></span>.</small></h3>
-                </div>
-                <div class="row">          
-                    <div class="col-md-12 item" id="summary">
-                        <div class="page-header">
-                            <h4>Summary</h4>
-                        </div>
-                        <div class="text-center">
-                          <i id="codez" class="summary-icon fa fa-terminal"></i>
-                          <i id="stats" class="summary-icon fa fa-bar-chart-o"></i>
-                          <i id="data" class="summary-icon fa fa-database"></i>
-                          <i id="experiment" class="summary-icon fa fa-flask"></i>
-                        </div>
-                    </div>
-                    <div class="col-md-12 item" id="experience">
-                        <div class="page-header">
-                            <h4>Experience</h4>
-                        </div>
-                        <div id="container" class="container-info"></div>
-                    </div>
-                    <div class="col-md-6 item" id="interests">
-                        <div class="page-header">
-                            <h4>Interests</h4>
-                        </div>
-                        <div id="container2" class="container-info"></div>
-                    </div>
-                    <div class="col-md-6 item" id="hobby">
-                        <div class="page-header">
-                            <h4>Hobby Space</h4>
-                        </div>
-                        <div id="container3" class="container-info"></div>
-                    </div>
-                    <div class="col-md-12 item" id="otherplaces">
-                        <div class="page-header">
-                            <h4>Where I am</h4>
-                        </div>
-                        <div id="container4" class="text-center">
-                          <a href="http://github.com/jbkunst/" target="_blank">
-                            <i class="fa fa-github-alt fa-inverse git-hub icon summary-icon"></i>
-                          </a>
-                          <a href="https://plus.google.com/+JoshuaKunst/posts" target="_blank">
-                            <i class="fa fa-google-plus fa-inverse google-plus icon summary-icon"></i>
-                          </a>
-                          <a href="http://www.linkedin.com/in/joshuakunst" target="_blank">
-                            <i class="fa fa-linkedin fa-inverse linkedin icon summary-icon"></i>
-                          </a>
-                          <a href="https://twitter.com/jbkunst" target="_blank">
-                            <i class="fa fa-twitter fa-inverse twitter icon summary-icon"></i>
-                          </a>
-                          <a href="mailto:jbkunst@gmail.com">
-                            <i class="fa fa-envelope fa-inverse mail icon summary-icon"></i>
-                          </a>                            
-                          <a href="http://stackoverflow.com/users/829971/jbkunst" target="_blank">
-                            <i class="fa fa-stack-overflow fa-inverse stack-overflow icon summary-icon"></i>
-                          </a>
-                          <a href="http://open.spotify.com/user/jbkunst" target="_blank">
-                            <i class="fa fa-spotify fa-inverse spotify icon summary-icon"></i>
-                          </a>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-md-10 col-md-offset-1">
+            <div class="page-header">
+              <h3>About<small>&nbsp;click <span id="start-trip"><a href="#">here</a></span> to tell you the story, or just we can <span><a href="{% url 'index' %}">get back</a></span>.</small></h3>
             </div>
+            <div class="row">
+              <div class="col-md-12 item" id="summary">
+                <div class="page-header">
+                      <h4>Summary</h4>
+                </div>
+                <div class="text-center">
+                  <i id="codez" class="summary-icon fa fa-terminal"></i>
+                  <i id="stats" class="summary-icon fa fa-bar-chart-o"></i>
+                  <i id="data" class="summary-icon fa fa-database"></i>
+                  <i id="experiment" class="summary-icon fa fa-flask"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 item" id="experience">
+                <div class="page-header">
+                  <h4>Experience</h4>
+                </div>
+                <div id="container" class="container-info"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 item" id="interests">
+                <div class="page-header">
+                  <h4>Interests</h4>
+                </div>
+                <div id="container2" class="container-info"></div>
+              </div>
+              <div class="col-md-6 item" id="hobby">
+                <div class="page-header">
+                  <h4>Hobby Space</h4>
+                </div>
+                <div id="container3" class="container-info"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 item" id="otherplaces">
+                <div class="page-header">
+                  <h4>Where I am</h4>
+                </div>
+                <div id="container4" class="text-center">
+                  <a href="http://github.com/jbkunst/" target="_blank">
+                    <i class="fa fa-github-alt fa-inverse git-hub icon summary-icon"></i>
+                  </a>
+                  <a href="https://plus.google.com/+JoshuaKunst/posts" target="_blank">
+                    <i class="fa fa-google-plus fa-inverse google-plus icon summary-icon"></i>
+                  </a>
+                  <a href="http://www.linkedin.com/in/joshuakunst" target="_blank">
+                    <i class="fa fa-linkedin fa-inverse linkedin icon summary-icon"></i>
+                  </a>
+                  <a href="https://twitter.com/jbkunst" target="_blank">
+                    <i class="fa fa-twitter fa-inverse twitter icon summary-icon"></i>
+                  </a>
+                  <a href="mailto:jbkunst@gmail.com">
+                    <i class="fa fa-envelope fa-inverse mail icon summary-icon"></i>
+                  </a>                            
+                  <a href="http://stackoverflow.com/users/829971/jbkunst" target="_blank">
+                    <i class="fa fa-stack-overflow fa-inverse stack-overflow icon summary-icon"></i>
+                  </a>
+                  <a href="http://open.spotify.com/user/jbkunst" target="_blank">
+                    <i class="fa fa-spotify fa-inverse spotify icon summary-icon"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 {% endblock content %}
