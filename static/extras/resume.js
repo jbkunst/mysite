@@ -161,7 +161,7 @@ $(function () {
         { sel : $("#experience"), content : trip_texts[4], position : "n", delay: 4000 },
         { sel : $("#interests"), content : trip_texts[5], position : "n", delay: 4000 },
         { sel : $("#hobby"), content : trip_texts[6], position : "n", delay: 4000 },
-        { sel : $("#container4"), content : trip_texts[7], position : "n", delay: 4000 },
+        { sel : $("#otherplaces"), content : trip_texts[7], position : "n", delay: 4000 },
       ], {
         tripTheme : "white",
         animation: "fadeIn",
@@ -187,5 +187,4 @@ $(function () {
     $("#start-trip").on("click", function() {
         trip.start();
     });
-
 });

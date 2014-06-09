@@ -1,10 +1,23 @@
 .icon {
-	color: #333;
+	color: #2A2A2A;
 	-webkit-transition: color 0.2s linear;
 	-moz-transition: color 0.2s linear;
 	-ms-transition: color 0.2s linear;
 	-o-transition: color 0.2s linear;
 	transition: color 0.2s linear;
+}
+
+.fa-inverse {
+	color: #BBB;
+}
+
+.fa-inverse:hover {
+	color: #FFF;
+}
+
+.fa-stack{
+	padding-top: 5px;
+	padding-left: 3px;
 }
 
 .home:hover {

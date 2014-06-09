@@ -51,15 +51,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	height: 50px;
 }
 
-.fa-stack{
-	padding-top: 5px;
-	padding-left: 3px;
-}
-
-.fa-inverse {
-	color: #EEE;
-}
-
 a.asidebar:link{
 	color: #FFFFFF;
 	text-decoration: none;
@@ -86,4 +77,3 @@ pre {
 	padding: 50px;
 	font-size: 70px;
 }
-
