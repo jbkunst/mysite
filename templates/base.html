@@ -35,12 +35,19 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <!-- <i class="fa fa-gear fa-spin fa-inverse fa-lg"></i> -->
+                </button>
                 <a class="navbar-brand" href="{% url 'index' %}">
                     <!-- <i class="fa fa-signal"></i> Jkunst <i class="fa fa-signal fa-flip-horizontal"></i> -->
-                    <i class="fa fa-gear fa-spin"></i> Jkunst <i class="fa fa-gears"></i>
+                    <i class="fa fa-gear fa-spin2"></i> Jkunst <i class="fa fa-gears"></i>
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="navbarCollapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% include "navbar-icons.html" %}
                 </ul>

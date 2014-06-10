@@ -65,6 +65,13 @@ a.asidebar:hover{
 	color: #000000;
 }
 
+.fa-spin2 {
+	-webkit-animation: spin 5s infinite ease;
+	-moz-animation: spin 5s infinite linear;
+	-o-animation: spin 5s infinite linear;
+	animation: spin 5s infinite linear;
+}
+
 .trip-content {
 	font-size: 20px;
 }
