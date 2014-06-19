@@ -1,5 +1,5 @@
 .icon {
-	color: #2A2A2A;
+	color: #333;
 	-webkit-transition: color 0.2s linear;
 	-moz-transition: color 0.2s linear;
 	-ms-transition: color 0.2s linear;
@@ -8,7 +8,7 @@
 }
 
 .fa-inverse {
-	color: #BBB;
+	color: #EEE;
 }
 
 .fa-inverse:hover {

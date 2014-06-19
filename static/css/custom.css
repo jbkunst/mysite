@@ -47,7 +47,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .iconslinks {
 	color: #333333;
-	background-color: #121212;
 	height: 50px;
 }
 
@@ -72,15 +71,6 @@ a.asidebar:hover{
 	animation: spin 5s infinite linear;
 }
 
-.trip-content {
-	font-size: 20px;
-}
-
 pre {
 	font-size: 0.8em;
-}
-
-.place-icon {
-	padding: 50px;
-	font-size: 70px;
 }
