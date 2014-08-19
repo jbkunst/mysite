@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.sitemaps',
+    'mysite',
     'blog',
 )
 
@@ -105,4 +106,4 @@ SITE_ID = 1
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-STATIC_ROOT = os.path.join(BASE_DIR, "..", "static_root")
+STATIC_ROOT = os.path.join(BASE_DIR, "..", "static")
