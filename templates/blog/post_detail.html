@@ -9,8 +9,8 @@
 					<h4>{{ post.title|title }}</h4>
 				</div>
 					<small>
-						<i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}<span class="tab"></span>
-						<i class="fa fa-archive"></i>&nbsp; {% for cat in post.category.all %}<a href="{% url 'category' cat.slug %}">{{ cat.name|title }} ({{ cat.counter }})</a>&nbsp;&nbsp{% endfor %}<span class="tab"></span>
+						<i class="fa fa-calendar"></i><span class="hs">{{ post.pub_date|date:"F d Y"}}<span class="tab"></span>
+						<i class="fa fa-archive"></i><span class="hs">{% for cat in post.category.all %}<a href="{% url 'category' cat.slug %}">{{ cat.name|title }} ({{ cat.counter }})</a><span class="hs">{% endfor %}<span class="tab"></span>
 						<!-- <i class="fa fa-comments"></i>&nbsp;5 Comments -->
 					</small>
 				<hr>

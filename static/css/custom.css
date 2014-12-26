@@ -69,3 +69,7 @@ a.asidebar:hover{
 pre {
 	font-size: 0.8em;
 }
+
+.hs {
+	padding-left: 5px;
+}

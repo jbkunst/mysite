@@ -11,7 +11,7 @@
 				{% for post in object_list %}
 				<div class="col-md-12">
 					<h6><a href="{{ post.get_absolute_url }}">{{ post.title|upper }}</a></h6>
-					<h6><small><i class="fa fa-calendar"></i>&nbsp;{{ post.pub_date|date:"F d Y"}}</small></h6>
+					<h6><small><i class="fa fa-calendar"></i><span class="hs"></span>{{ post.pub_date|date:"F d Y"}}</small></h6>
 					{{ post.body|safe|truncatewords:25 }}
 				</div>
 				<br>
