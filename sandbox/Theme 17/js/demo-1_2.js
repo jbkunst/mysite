@@ -12,12 +12,12 @@
         height = window.innerHeight;
         target = {x: width/2, y: height/2};
 
-        largeHeader = document.getElementById('large-header');
+        largeHeader = document.getElementById('sidebar');
         largeHeader.style.height = height+'px';
 
         canvas = document.getElementById('demo-canvas');
-        canvas.width = width;
-        canvas.height = height/5;
+        canvas.width = document.getElementById('sidebar').style.width;
+        canvas.height = document.getElementById('sidebar').style.height;
         ctx = canvas.getContext('2d');
 
         // create points
