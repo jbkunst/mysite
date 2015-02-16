@@ -90,6 +90,7 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
 a { 
 	padding: 0;
 	margin: 0;
@@ -162,8 +163,8 @@ input {
 	}
 
 .btn-theme {
+	color: white;
 	background: #f7ca18;
-	color: white
 }
 
 /* Bootstrap Modification */
@@ -234,25 +235,25 @@ hr {
 }
 
 /* BLACK SECTION */
-#blk {
+.blk {
 	background: #181818;
 	padding-bottom: 80px;
 	padding-top: 80px;
 }
 
-#blk h5 {
+.blk h5 {
 	color: #f7ca18;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
 
-#blk hr {
+.blk hr {
 	border: 1px solid #f7ca18;
 	width: 100px;
 }
 
 /* Grey Section */
-#grey {
+.grey {
 	background: #f3f3f3;
 	padding-bottom: 80px;
 	padding-top: 80px;
@@ -262,7 +263,7 @@ hr {
 	font-size: 40px;
 }
 
-#grey h5 {
+.grey h5 {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
