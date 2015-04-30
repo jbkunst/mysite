@@ -5,14 +5,14 @@
 {% load staticfiles %}
 
 {% block css %}
-    <link href="http://eragonj.github.io/Trip.js/src/trip.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="//oss.maxcdn.com/jquery.trip.js/3.0.0/trip.min.css"></link>
     <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"></link>
 {% endblock css %}
 
 {% block js %}
     <script src="http://underscorejs.org/underscore-min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="http://eragonj.github.io/Trip.js/src/trip.js"></script>
+    <script src="//oss.maxcdn.com/jquery.trip.js/3.0.0/trip.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://rawgithub.com/jasondavies/d3-cloud/master/d3.layout.cloud.js"></script>
     <script src="{% static 'js/about.js' %}"></script>
